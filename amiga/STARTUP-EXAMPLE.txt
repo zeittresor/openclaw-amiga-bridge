@@ -1,0 +1,20 @@
+Amiga side quick start (AmigaOS 2/3)
+
+1) Ensure you have a shared volume mapped by your emulator, for example:
+   Shared:  -> points to a Windows folder like C:\Amiga\Shared
+
+2) Create the folders (one-time):
+   makedir Shared:openclaw
+   makedir Shared:openclaw/in
+   makedir Shared:openclaw/out
+   makedir Shared:openclaw/snap
+   makedir Shared:openclaw/log
+
+3) Start the daemon (in background):
+   Run >NIL: RX Shared:openclaw/amiga/clawd.rexx Shared:openclaw
+
+   (Adjust the path if you copied clawd.rexx elsewhere.)
+
+4) Stop it:
+   Put a stop job into Shared:openclaw/in  (Windows CLI has: clawbridge.py stop)
+
